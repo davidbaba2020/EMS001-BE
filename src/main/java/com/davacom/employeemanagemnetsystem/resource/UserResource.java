@@ -1,4 +1,4 @@
-package com.davacom.employeemanagemnetsystem.Resource;
+package com.davacom.employeemanagemnetsystem.resource;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

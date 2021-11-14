@@ -1,4 +1,4 @@
-package com.davacom.employeemanagemnetsystem.Models;
+package com.davacom.employeemanagemnetsystem.models;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

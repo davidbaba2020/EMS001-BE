@@ -1,4 +1,4 @@
-package com.davacom.employeemanagemnetsystem.Models;
+package com.davacom.employeemanagemnetsystem.models;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
