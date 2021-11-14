@@ -1,0 +1,35 @@
+#
+#spring.datasource.url=jdbc:postgresql://localhost:5434/employment-management-system0001
+#spring.datasource.username=
+#spring.datasource.password=
+#spring.datasource.driver-class-name=org.postgresql.Driver
+#spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+#spring.jpa.hibernate.ddl-auto=update
+#spring.jpa.show-sql=true
+#spring.devtools.restart.enabled=true
+#spring.jpa.properties.hibernate.format_sql=true
+#
+#
+Server:
+  port:8080
+
+Spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5434/employment-management-system0001
+    username:
+    password:
+    driver-class-name: org.postgresql.Driver
+    devtools:
+      restart:
+        enabled: true
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        ddl-auto: update
+    devtools:
+      restart:
+        enabled: true
