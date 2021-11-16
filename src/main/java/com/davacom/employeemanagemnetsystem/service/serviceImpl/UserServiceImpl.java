@@ -19,13 +19,13 @@ import java.util.Date;
 @Service
 @Transactional
 @Qualifier("UserDetailsService")
-public class UserRepositoryImpl implements UserService, UserDetailsService {
+public class UserServiceImpl implements UserService, UserDetailsService {
    
     private Logger LOGGER = LoggerFactory.getLogger(getClass());
     private UserRepository userRepository;
 
     @Autowired
-    public UserRepositoryImpl(UserRepository userRepository) {
+    public UserServiceImpl(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
