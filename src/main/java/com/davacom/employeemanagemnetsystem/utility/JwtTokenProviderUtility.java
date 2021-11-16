@@ -13,6 +13,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
+import org.springframework.stereotype.Component;
 
 
 import javax.servlet.http.HttpServletRequest;
@@ -26,10 +27,10 @@ import static com.auth0.jwt.algorithms.Algorithm.*;
 import static com.davacom.employeemanagemnetsystem.constants.SecurityConstant.*;
 import static java.util.stream.StreamSupport.stream;
 
-@ComponentScan
+@Component
 public class JwtTokenProviderUtility {
 
-    @Value("${jwt.yml}")
+    @Value("jwt.secret")
     private String secret;
 
     public String generateJwtToken(UserPrincipal userPrincipal){

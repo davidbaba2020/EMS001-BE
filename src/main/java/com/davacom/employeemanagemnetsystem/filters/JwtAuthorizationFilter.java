@@ -1,10 +1,12 @@
 package com.davacom.employeemanagemnetsystem.filters;
 
 import com.davacom.employeemanagemnetsystem.utility.JwtTokenProviderUtility;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import javax.servlet.FilterChain;
@@ -18,11 +20,12 @@ import static com.davacom.employeemanagemnetsystem.constants.SecurityConstant.*;
 import static org.springframework.http.HttpHeaders.*;
 import static org.springframework.http.HttpStatus.*;
 
-@ComponentScan
+@Component
 public class JwtAuthorizationFilter extends OncePerRequestFilter {
 
     private JwtTokenProviderUtility jwtTokenProviderUtility;
 
+    @Autowired
     public JwtAuthorizationFilter(JwtTokenProviderUtility jwtTokenProviderUtility) {
         this.jwtTokenProviderUtility = jwtTokenProviderUtility;
     }

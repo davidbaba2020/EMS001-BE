@@ -12,8 +12,7 @@
 #
 
 jwt:
-  secret: 'akuIbhkOin6RPgNQ3br5-WVerlY67rHIsBOlmhJ5A
-'
+  secret: "akuIbhkOin6RPgNQ3br5-WVerlY67rHIsBOlmhJ5A"
 Server:
   port:8080
 
