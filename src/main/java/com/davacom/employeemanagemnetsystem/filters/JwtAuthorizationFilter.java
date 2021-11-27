@@ -3,6 +3,7 @@ package com.davacom.employeemanagemnetsystem.filters;
 import com.davacom.employeemanagemnetsystem.utility.JwtTokenProviderUtility;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.http.HttpHeaders;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -36,7 +37,7 @@ public class JwtAuthorizationFilter extends OncePerRequestFilter {
             response.setStatus(OK.value());
         }else{
             String authorizationHeader = request.getHeader(AUTHORIZATION);
-            if (authorizationHeader==null || !authorizationHeader.startsWith(TOKEN_PREFIX)){
+            if (authorizationHeader == null || !(authorizationHeader.startsWith(TOKEN_PREFIX))){
                 filterChain.doFilter(request,response);
                 return;
             }
